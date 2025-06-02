@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Coding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: #000;
+  overflow-x: hidden; /* Fix for scrolling */
+}
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+
+    p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #ff9800;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  
+  <div class="container">
+    <h1>Salom</h1>
+    <p>Kodlash, ko'pincha dasturlash deb ataladi, bu kompyuterlar bajarishi uchun ko'rsatmalar yaratish jarayonidir. Bu biz bugungi kunda foydalanayotgan deyarli barcha texnologiyaning asosi hisoblanadi - veb-saytlardan mobil ilovalargacha, sun'iy intelekt va kosmik tadqiqotlargacha.</p>
+
+    <h2>Kodlash nima?</h2>
+    <p>Kodlash - bu kompyuterlar tushunadigan tilida bir qator buyruqlarni yozish jarayoni. Ommabop tillarga quyidagilar kiradi <span class="highlight">Python</span>, <span class="highlight">JavaScript</span>, <span class="highlight">C++</span>, va <span class="highlight">HTML</span>.</p>
+
+    <h2>Kodlash nima uchun muhim?</h2>
+    <ul>
+      <li>Bu raqamli o'zgarishni haydaydi.</li>
+      <li>Muammolarni hal qilish ko'nikmalarini oshiradi.</li>
+      <li>Sanoatlarda yuqori talab.</li>
+      <li>Inovatsiya va ijodkorlikni rag'batlantiradi.</li>
+    </ul>
+
+    <h2>Qanday qilib kod yozishni boshlash kerak</h2>
+    <p>Kodlashni boshlash uchun bir til tanlang, asosiy narsalarni o'rganing, mashq qiling va kodlash jamoalariga qo'shiling. Mashhur platformalar kabi <span class="highlight">freeCodeCamp</span> va <span class="highlight">Codecademy</span> yangi boshlovchilar uchun ajoyib.</p>
+
+    <h2>Kodlashning kelajagi</h2>
+    <p>Ilgari surishlar bilan <span class="highlight">AI</span>, kodlash yanada qulaylashmoqda. GitHub Copilot va blokga asoslangan dasturlash kabi vositalar hatto boshlovchilarni ham texnologiya olamiga hissa qo'shishga imkon beradi..</p>
+
+    <p class="footer">Har bir mutaxassis dasturchi bir paytlar yangi boshlovchi bo'lgan. Bugun sayohatingizni boshlang.!</p>
+  </div>
+
+  <!-- Include Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true,
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 },
+        },
+      },
+      retina_detect: true,
+    });
+  </script>
+</body>
+</html>
